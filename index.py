@@ -1,13 +1,3 @@
-# import mysql.connector as mysql
-
-# conexao = mysql.connect(
-
-#     host = "127.0.0.1",
-#     user = "root",
-#     password = "julio",
-#     database = "teste"
-# )
-
 from bancodados import conexao
 
 cursor = conexao.cursor()
@@ -21,6 +11,8 @@ def obterdado():
         nome = input("Qual é o seu nome: ")
 
         if nome == "sair":
+            cursor.close()
+            conexao.close()
             break
         else:
             altura = int(input("Qual é a sua altura em centimetros: "))
@@ -33,5 +25,5 @@ def obterdado():
 
             print(f"{cursor.rowcount} registros inseridos.")
 
-while conexao.is_connected:
-    obterdado()
+# while conexao.is_connected:
+obterdado()
