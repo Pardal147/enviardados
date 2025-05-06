@@ -14,6 +14,7 @@ def obterdado():
             cursor.close()
             conexao.close()
             break
+
         else:
             altura = int(input("Qual é a sua altura em centimetros: "))
             valores = [nome, altura]
@@ -25,5 +26,4 @@ def obterdado():
 
             print(f"{cursor.rowcount} registros inseridos.")
 
-# while conexao.is_connected:
 obterdado()
