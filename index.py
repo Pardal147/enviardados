@@ -27,15 +27,3 @@ def obterdado():
             print(f"{cursor.rowcount} registros inseridos.")
 
 obterdado()
-
-
-
-
-
-
-
-
-
-
-
-print("teste")
